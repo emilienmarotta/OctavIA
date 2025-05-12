@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* Nunito Regular */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/font/Nunito/Nunito-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito Italic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/font/Nunito/Nunito-Italic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito Light */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/font/Nunito/Nunito-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/font/Nunito/Nunito-LightItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito Medium */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/font/Nunito/Nunito-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/font/Nunito/Nunito-MediumItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito SemiBold */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/font/Nunito/Nunito-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/font/Nunito/Nunito-SemiBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito Bold */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/font/Nunito/Nunito-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/font/Nunito/Nunito-BoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito ExtraBold */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/font/Nunito/Nunito-ExtraBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 800;
+  src: url('/font/Nunito/Nunito-ExtraBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito Black */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/font/Nunito/Nunito-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 900;
+  src: url('/font/Nunito/Nunito-BlackItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Nunito ExtraLight */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/font/Nunito/Nunito-ExtraLight.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 200;
+  src: url('/font/Nunito/Nunito-ExtraLightItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-blueOctavia: #3774E5;
+  --color-blueOctavia20: #D7E3FA;
+  --font-regular: "Nunito", "Arial", sans-serif;
+}
+
+/*CSS APPLICATIONS*/
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-regular);
+  font-size: var(--text-lg);
+  background-color: white;
+  background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.shadow-hover:hover {
+  box-shadow: -10px 5px 0px var(--color-blueOctavia);
+  transform: translate(10px, -5px);
+}
+
+.full-shadow {
+  box-shadow: -10px 5px 0px var(--color-blueOctavia);
+}
+
+.bottom-border {
+  box-shadow: 0px 5px 0px var(--color-blueOctavia);
+}
+
+.main-cta:hover {
+  box-shadow: 0px 10px 0px var(--color-blueOctavia);
+}
+
+input[type="submit"], a {
+  cursor: pointer;
+}
+
+
+/*TAILWIND APPLICATIONS*/
+
+.btn-white {
+  @apply px-4 py-2 rounded-xl border border-2 border-black text-black bg-white transition;
+}
+
+.btn-blue {
+  @apply px-4 py-2 rounded-xl border border-2 border-blueOctavia text-white bg-[#3774E5] hover:bg-white hover:text-black hover:border-black transition;
+}
+
+.li-box {
+  @apply px-4 py-2 rounded-xl border border-2 border-black text-black transition inline-block bg-white;
+}
+
+.main-cta {
+  @apply px-4 py-2 rounded-xl border border-2 border-black text-black transition bg-white;
+}
+
+h1 {
+  @apply text-5xl font-extrabold;
+}
+
+section {
+  @apply px-16 my-16;
+}
+
+img::selection {
+  @apply select-none bg-transparent;
+}
+
+::selection {
+  @apply bg-blueOctavia20 text-black;
+}
+
+
+
+/* A FAIRE **
+* ajouter un effet hover pour le cta -> bordure du bas qui grossit
+*
+*/
